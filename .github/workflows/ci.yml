@@ -37,13 +37,13 @@ jobs:
       - name: Run black
         run: |
           conda install black flake8 mypy
-          black --check .
+          flake8
 
       - name: Run flake8
-        run: flake8
+        run: black --check .
 
       - name: Run Mypy
         run: mypy retinaface
 
-      - name: Deactivate Conda environment
-        run: conda deactivate
+      #- name: Deactivate Conda environment
+       # run: conda deactivate
