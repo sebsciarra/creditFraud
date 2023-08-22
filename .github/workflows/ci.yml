@@ -15,7 +15,7 @@ jobs:
 
       - name: Set up Conda environment
         run: |
-          conda env create -n creditFraud -f environment.lock.yml
+          conda env create -f environment.lock.yml
           conda activate creditFraud
           python -m pip install --upgrade pip
           pip install black flake8 mypy
