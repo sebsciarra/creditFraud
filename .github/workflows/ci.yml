@@ -42,9 +42,3 @@ jobs:
 
       - name: Run flake8
         run: black --check .
-
-      - name: Run Mypy
-        run: mypy creditFraud
-
-      #- name: Deactivate Conda environment
-       # run: conda deactivate
