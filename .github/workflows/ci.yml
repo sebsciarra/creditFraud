@@ -13,10 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install dependencies
+      - name: Set up Conda environment
         run: |
+          conda env create -n creditFraud -f environment.lock.yaml
+          conda activate creditFraud
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
           pip install black flake8 mypy
 
       - name: Run black
@@ -27,3 +28,6 @@ jobs:
 
       - name: Run Mypy
         run: mypy retinaface
+
+      - name: Deactivate Conda environment
+        run: conda deactivate
