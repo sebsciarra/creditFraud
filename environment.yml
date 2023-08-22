@@ -7,7 +7,7 @@ dependencies:
   - aiosqlite=0.18.0
   - alabaster=0.7.12
   - anyio=3.5.0
-  - appnope=0.1.2
+  - appnope>=0.1.2
   - argon2-cffi=21.3.0
   - argon2-cffi-bindings=21.2.0
   - asttokens=2.0.5
@@ -91,8 +91,8 @@ dependencies:
   - libbrotlienc=1.0.9
   - libcxx=14.0.6
   - libdeflate=1.17
-  - libffi=3.4.4
-  - libgfortran=5.0.0
+  - libffi>=3.4.4
+  - libgfortran>=5.0.0
   - libgfortran5=11.3.0
   - libiconv=1.16
   - libpng=1.6.39
