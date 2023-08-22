@@ -44,7 +44,7 @@ jobs:
         run: black --check .
 
       - name: Run Mypy
-        run: mypy credit fraud
+        run: mypy creditFraud
 
       #- name: Deactivate Conda environment
        # run: conda deactivate
