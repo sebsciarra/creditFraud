@@ -236,4 +236,3 @@ dependencies:
       - plotnine==0.12.2
       - protobuf==4.24.1
       - yarg==0.1.9
-prefix: /Users/sebastiansciarra/anaconda3/envs/credit_Fraud
