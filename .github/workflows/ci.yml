@@ -1,0 +1,33 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Conda environment
+        run: |
+          conda env create -f environment.lock.yml
+          conda activate creditFraud
+          python -m pip install --upgrade pip
+          pip install black flake8 mypy
+
+      - name: Run black
+        run: black --check .
+
+      - name: Run flake8
+        run: flake8
+
+      - name: Run Mypy
+        run: mypy retinaface
+
+      - name: Deactivate Conda environment
+        run: conda deactivate
