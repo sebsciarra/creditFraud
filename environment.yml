@@ -7,7 +7,7 @@ dependencies:
   - aiosqlite=0.18.0
   - alabaster=0.7.12
   - anyio=3.5.0
-  - appnope>=0.1.2
+  - appnope=0.1.2
   - argon2-cffi=21.3.0
   - argon2-cffi-bindings=21.2.0
   - asttokens=2.0.5
@@ -91,8 +91,8 @@ dependencies:
   - libbrotlienc=1.0.9
   - libcxx=14.0.6
   - libdeflate=1.17
-  - libffi>=3.4.4
-  - libgfortran>=5.0.0
+  - libffi=3.4.4
+  - libgfortran=5.0.0
   - libgfortran5=11.3.0
   - libiconv=1.16
   - libpng=1.6.39
@@ -167,7 +167,7 @@ dependencies:
   - pysocks=1.7.1
   - pytest=7.4.0
   - pytest-cov=4.0.0
-  - python=3.11.4
+  - python>=3.8
   - python-dateutil=2.8.2
   - python-fastjsonschema=2.16.2
   - python-json-logger=2.0.7
