@@ -5,17 +5,34 @@ on:
     branches:
       - dev
 
+# https://github.com/marketplace/actions/setup-miniconda#use-a-default-shell
+  defaults:
+    run:
+      shell: bash -l {0}
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: |
-          conda env create -n creditFraud -f environment.lock.yml
+
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          "python-version: 3.11.4"
+
+      - name: Setup miniconda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-update-conda: true
+          miniforge-variant: Mambaforge
+          channels: conda-forge
+          python-version: 3.11.4
+          activate-environment: causality
+          environment-file: environment.lock.yml
+          use-mamba: true
+        run:
           python -m pip install --upgrade pip
           pip install black flake8 mypy
 
