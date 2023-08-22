@@ -21,7 +21,7 @@ In order to set up the necessary environment:
 
 1. review and uncomment what you need in `environment.yml` and create an environment `creditFraud` with the help of [conda]:
    ```
-   conda env create -f environment.yml
+   conda env create -n creditFraud -f environment.yml
    ```
 2. activate the new environment with:
    ```
@@ -59,7 +59,7 @@ Then take a look into the `scripts` and `notebooks` folders.
 2. Create concrete dependencies as `environment.lock.yml` for the exact reproduction of your
    environment with:
    ```bash
-   conda env export -n creditFraud -f environment.lock.yml
+   conda env export -n name_of_conda_env -f environment.lock.yml
    ```
    For multi-OS development, consider using `--no-builds` during the export.
 3. Update your current environment with respect to a new `environment.lock.yml` using:

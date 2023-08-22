@@ -27,6 +27,3 @@ jobs:
 
       - name: Run Mypy
         run: mypy retinaface
-
-      - name: Deactivate Conda environment
-        run: conda deactivate
