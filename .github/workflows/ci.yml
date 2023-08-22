@@ -15,9 +15,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip cache purge
+          conda env create -n creditFraud -f -f environment.yml
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
           pip install black flake8 mypy
 
       - name: Run black
@@ -28,3 +27,6 @@ jobs:
 
       - name: Run Mypy
         run: mypy retinaface
+
+      - name: Deactivate conda environment
+        run: conda deactivate
