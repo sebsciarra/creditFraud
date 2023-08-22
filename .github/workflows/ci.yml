@@ -5,14 +5,12 @@ on:
     branches:
       - dev
 
-# https://github.com/marketplace/actions/setup-miniconda#use-a-default-shell
-  defaults:
-    run:
-      shell: bash -l {0}
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {0}
 
     steps:
 
