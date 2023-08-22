@@ -44,7 +44,7 @@ jobs:
         run: black --check .
 
       - name: Run Mypy
-        run: mypy retinaface
+        run: mypy
 
       #- name: Deactivate Conda environment
        # run: conda deactivate
