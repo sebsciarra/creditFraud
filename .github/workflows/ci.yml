@@ -30,6 +30,8 @@ jobs:
           activate-environment: causality
           environment-file: environment.lock.yml
           use-mamba: true
+
+      - name: Install packages
         run:
           python -m pip install --upgrade pip
           pip install black flake8 mypy
