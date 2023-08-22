@@ -29,8 +29,8 @@ jobs:
         with:
           auto-update-conda: true
           miniforge-variant: Mambaforge
-          channels: conda-forge, defaults
-          python-version: 3.9
+          channels: conda-forge, defaults, bioconda
+          python-version: 3.11.4
           activate-environment: creditFraud
           environment-file: environment.yml
           use-mamba: true
