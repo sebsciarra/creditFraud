@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build and Test example
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     defaults:
       run:
         shell: bash -el {0}
@@ -31,7 +31,7 @@ jobs:
           miniforge-variant: Mambaforge
           channels: conda-forge, defaults, bioconda
           python-version: 3.11.4
-          activate-environment: creditFraud
+          activate-environment: ds_project
           environment-file: environment.yml
           use-mamba: true
 
