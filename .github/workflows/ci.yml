@@ -16,9 +16,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Install Xcode Command Line Tools
-        run: xcode-select --install
+s
 
      # - name: Set up Conda environment
         #run: |
