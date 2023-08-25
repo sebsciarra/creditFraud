@@ -17,6 +17,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Install Xcode Command Line Tools
+        run: xcode-select --install
+
+
+
+
      # - name: Set up Conda environment
         #run: |
           #conda config --set restore_free_channel true
