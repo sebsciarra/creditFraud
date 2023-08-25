@@ -228,7 +228,7 @@ dependencies:
       - argon2-cffi==23.1.0
       - argon2-cffi-bindings==21.2.0
       - arrow==1.2.3
-      - asteroid==2.15.6
+      - astroid==2.15.6
       - asttokens==2.2.1
       - attrs==23.1.0
       - autopep8==2.0.2
